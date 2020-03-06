@@ -1,0 +1,59 @@
+---
+--- 
+
+body{
+    font-family: 'Nunito', sans-serif !important;
+}
+
+/* Navbar */
+.nav-text-small{
+    font-size: 12px;
+}
+
+.nav-item{
+    margin-right: 20px;
+    text-align: left !important;
+    border-left: 2px sold #1D4E6B !important;
+}
+
+/* Colors */
+.bg-blue-pmc{
+    background-color:#1D4E6B;
+}
+
+.text-blue-pmc{
+    color:#1D4E6B;
+}
+
+/* Carousel */
+
+.carousel-item img{
+    height:450px;
+    filter: brightness(30%);
+    width: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    display: none;
+}
+
+.carousel-caption{
+    width: 90%;
+    right: 7%;
+    left: 7%;
+    margin: 0px auto !important;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+
+@media(max-width: 500px){
+    .carousel-title{
+        font-size: 25px;
+        
+    }
+}
+
+

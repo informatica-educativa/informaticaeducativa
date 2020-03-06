@@ -1,0 +1,67 @@
+---
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Diego Lopes">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="icon" type="image/png" href="http://www.caraguatatuba.sp.gov.br/pmc/wp-content/themes/awesomepmc/assets/img/favicon.png">
+    
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/custom.css">
+    
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+        <title>Informática Educativa de Caraguatatuba</title>
+    </head>
+</head>
+<body>
+
+    {% include nav.html %}
+    <main class="container mt-5">
+        <header>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <small>{{ page.date | date: "%-d %B %Y" }}</small>
+                    <h1 class="display-4"> {{ page.title }}</h1>
+                    <p class="view">Autor: {{ page.author | default: site.author }}</p> 
+                    {% if page.tags %}
+                    <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+                    {% endif %}
+                </div>
+                <div class="col-md-5 pl-0 m-0">
+                    <img height="230px" src="{{site.baserl}}/assets/img/{{ page.featured_image }}" alt="">
+                </div>
+
+            </div>
+        </header>
+        
+        <hr>
+        
+        {{content}}
+
+        {% if page.tags %}
+        <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+        {% endif %}
+    </main>
+
+    {% include footer.html %}
+</body>
+</html>
