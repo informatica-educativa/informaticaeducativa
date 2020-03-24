@@ -16,6 +16,7 @@ body{
     border-left: 2px sold #1D4E6B !important;
 }
 
+
 /* Colors */
 .bg-blue-pmc{
     background-color:#1D4E6B;
@@ -49,11 +50,24 @@ ul {
 }
 
 
+// Post
+
+.post-image {
+    height: 230px;
+    width: 100%;
+}
+
+// Mobile version
 @media(max-width: 500px){
     .carousel-title{
         font-size: 25px;
         
     }
+
+   h1 .display-4{
+        font-weight: 1rem !important;
+    }
+
 }
 
 
